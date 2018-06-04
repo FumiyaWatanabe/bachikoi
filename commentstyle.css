@@ -19,6 +19,7 @@ html{
 .collist2 .collist-box {
    float: left;
    margin-bottom: 30px;
+
 }
 
 #image{
@@ -103,11 +104,12 @@ form{
 }
 
 .sharebutton{
-  padding-top: 5rem;
-  padding-left: 5rem;
+  padding-top: 1rem;
+  width: 18rem;
+
 }
 
 .downloadbutton{
   padding-top: 6rem;
-  padding-left: 5rem;
+
 }
