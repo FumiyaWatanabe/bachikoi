@@ -7,68 +7,65 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="commentstyle.css">
     <title>Comment page</title>
+
+    <style>
+    main{
+        background:url(img/img5.jpg);
+        background-size:cover;
+        height: 600px;
+    }
+    </style>
   </head>
-  <style media="screen">
-    .col-md-7{
-      width: 600px;
-      margin-left:auto;
-      margin-right:auto;
-      margin-top:100px;
-      margin-bottom:100px;
-      height: 500px;
-      border:3px solid #000000;
-    }
-    .form-group{
-      margin-left:auto;
-      margin-right:auto;
-      margin-top:100px;
-      margin-bottom:100px;
-    }
-    }
-  </style>
 
   <body>
-
+    <main class="cover">
     <!--選択した画像を表示-->
-    <div class="row">
-      <div class="col-md-7">
-画像
+    <div class="collist2">
+      <div id="image" class="collist-box mx-5 my-5" >
+          <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
       </div>
 
     <!--画像にコメントの追加-->
-      <div class="form-group">
-        <label>コメント</label>
-        <textarea rows="5" class="form-control" id="ask1"></textarea>
+      <div class="collist-box my-5">
+        <p>コメント</p>
+        <form name="chat" onsubmit="send();return false" method="POST" >
+        <textarea id="text"cols="30" rows="5"></textarea><br>
+        <input type="submit" value="送信"></input>
+        </form>
+        <!--いいねボタン（実装予定）-->
+        <form name="form1">
+        <input class="square_btn2" type="button" value="bad" name="p_btn">
+        <input class="square_btn" value="good" name="m_btn">
+        </form>
+
+        <span id="counter"></span>
+        <span id="counter2"></span>
       </div>
+    </div>
 
 
 
-  <!--いいねボタン（実装予定）-->
-    
-
+</main>
   <!--関連画像の表示-->
-    <div class="">
-      他の作品
-    </div>
-    <div class="row mb-3">
-      <div class="col text-center">
-        <img class="img-thumbnail rounded" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
+<div class="container">
+  <h3>〜関連する作品〜</h3>
+</div>
 
-      </div>
-      <div class="col">
-        <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-      </div>
-      <div class="col">
-        <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-      </div>
-    </div>
-
+  <div id="fadein_area">
+    <ul>
+      <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+      <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+      <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+      <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+      <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+    </ul>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="comment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>

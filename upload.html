@@ -7,59 +7,61 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="commentstyle.css">
+    <title>Comment page</title>
 
-    <title>完成</title>
+    <style>
+
+    #top{
+      padding-top: 10rem;
+      padding-left: 15rem;
+    }
+
+  #image{
+    padding-top: 12rem;
+    padding-left: 15rem;
+  }
+
+  .button{
+    padding-top: 10rem;
+  }
+    </style>
+
   </head>
-  <style >
-    .col-md-7{
-      width: 600px;
-      margin-left:auto;
-      margin-right:auto;
-      margin-top:100px;
-      margin-bottom:100px;
-      height: 500px;
-      border:3px solid #000000;
-    }
-    .sharebutton{
-      margin-top:150px;
-
-    }
-    .downloadbutton{
-      margin-top:250px;
-    }
-
-
-  </style>
 
   <body>
-
+    <main class="cover">
     <!--選択した画像を表示-->
-    <div class="row">
-      <div class="col-md-7">
-完成した画像
+    <div class="collist2">
+      <div id="image" class="collist-box mx-5 my-5" >
+          <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
       </div>
-      <div class="button">
-        <div class="sharebutton mx-auto">
-          <button type="button" class="btn btn-primary btn-lg btn-block">Share</button>
-        </div>
+
+
+      <div class="collist-box my-5">
+        <div class="button">
+          <div class="sharebutton mx-auto">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Share</button>
+          </div>
+
         <div class="downloadbutton mx-auto">
           <button type="button" class="btn btn-lg btn-block">Download</button>
         </div>
+
+
+      </div>
+      <div id="top">
+      <a href="index.html">トップへ戻る→</a>
       </div>
     </div>
 
-    <a href="">
-      <div class="text-right">
-      トップへ戻る→
-    </div>
-    </a>
 
 
-
+</main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="comment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>

@@ -4,32 +4,72 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
     <title>BACHIKOI</title>
     <style>
+    html body{
+      font-family: monospace;
+    }
     .cover{
-      background:url(img/sample1.jpg);
+      background:url(img/img5.jpg);
       background-size:cover;
     }
     .container-fulid{
       height: 550px;
     }
+
+    * {
+    	margin: 0;
+    	padding: 0;
+    }
+
+    #fadein_area {
+    	width: 106%;
+      display: flex;
+    }
+    li {
+      width: 30%;
+    	margin: 5px;
+    	list-style: none;
+      display: inline-block;
+    }
+
     </style>
+
+    <script type="text/javascript">
+    $(function(){
+
+    	// リストを非表示
+    	$('#fadein_area ul li').hide();
+
+    	// 繰り返し処理
+    	$('#fadein_area ul li').each(function(i) {
+
+    		// 遅延させてフェードイン
+    		$(this).delay(700 * i).fadeIn(1500);
+
+    	});
+
+    });
+    </script>
+
+
   </head>
   <body>
     <header class="mb-3">
       <!--タイトルと検索窓-->
-      <div class="container-fulid cover py-5">
+      <div class="container-fulid cover py-4">
         <div class="container my-5 py-5">
-          <h1 class="display-1 text-center mb-1">BACHIKOI</h1>
-          <h5 class="display-5 text-center mb-4">〜ｘｘｘｘｘｘｘｘｘｘ〜</h5>
-          <div class="input-group px-5">
+          <h1 class="display-1 text-center mb-1">Webapp_007</h1>
+          <h5 class="display-5 text-center mb-4">〜bachikoi〜</h5>
+          <div class="input-group px-5 col-md-8 mx-auto">
           	<input type="text" class="form-control" placeholder="テキスト入力欄">
       	    <span class="input-group-btn">
-	      	    <button type="button" class="btn btn-default">検索</button>
+	      	    <button type="button" class="btn btn-default ">検索</button>
 　          </span>
           </div>
       <!--ここまで-->
@@ -48,99 +88,74 @@
     </header>
 
     <main>
-      <h2 class=" text-center">~みんなの作品~</h2>
+      <h2 class=" text-center">
+        ~みんなの作品~
+      </h2>
       <div class="row">
       <!-- タブ部分 -->
-      <ul id="myTab" class="col nav nav-tabs" role="tablist">
-        <li class="nav-item">
-          <a href="#home" id="home-tab" class="nav-link active" role="tab" data-toggle="tab" aria-controls="home" aria-selected="true">ALL</a>
-        </li>
-        <li class="nav-item">
-          <a href="#profile" id="profile-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="profile" aria-selected="false">yyy</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contact" id="contact-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">zzz</a>
-        </li>
-      </ul>
-    </div>
+        <ul id="myTab" class="col nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a href="#home" id="home-tab" class="nav-link active" role="tab" data-toggle="tab" aria-controls="home" aria-selected="true">ALL</a>
+          </li>
+          <li class="nav-item">
+            <a href="#profile" id="profile-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="profile" aria-selected="false">yyy</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" id="contact-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">zzz</a>
+          </li>
+        </ul>
+      </div>
 
       <!-- パネル部分 -->
       <div id="myTabContent" class="tab-content mt-3">
         <div id="home" class="tab-pane active" role="tabpanel" aria-labelledby="home-tab">
           <div class="text-right">
-            <a href="#">ALLの全ての画像を表示→</a>
-          </div>
-          <div class="row mb-3">
-            <div class="col text-center">
-              <img class="img-thumbnail rounded" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /
-
-            </div>
-          </div>
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-            </div>
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-            </div>
+            <a href="all.html">ALLの全ての画像を表示→</a>
           </div>
 
-          <div class="row mb-3">
-            <div class="col">
-              <img class="img-thumbnail rounded" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-            </div>
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-            </div>
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-            </div>
+          <div id="fadein_area">
+          	<ul>
+          		<li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+          		<li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+          		<li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+          		<li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+          		<li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" /></li>
+          	</ul>
           </div>
 
-          <div class="row mb-3">
-            <div class="col">
-              <img class="img-thumbnail rounded" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-            </div>
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-            </div>
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat3" />
-            </div>
-          </div>
+
+
         </div>
 
         <div id="profile" class="tab-pane" role="tabpanel" aria-labelledby="profile-tab">
           <div class="text-right">
             <a href="#">yyyの全ての画像を表示→</a>
           </div>
-          <div class="row">
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" />
-            </div>
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" />
-            </div>
-            <div class="col">
-              <img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" />
-            </div>
+
+          <div id="fadein_area">
+          	<ul>
+          		<li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" /></li>
+              <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" /></li>
+              <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" /></li>
+              <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" /></li>
+              <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" /></li>
+              <li><img class="img-thumbnail" src="http://clue-design.com/wp-content/uploads/2017/11/cat4" /></li>
+
+          	</ul>
           </div>
-        </div>
+
+          </div>
+
 
         <div id="contact" class="tab-pane" role="tabpanel" aria-labelledby="contact-tab">コンタクトの文章です。...
         <div class="text-right">
           <a href="#">zzzの全ての画像を表示→</a>
         </div>
       </div>
-
-
     </main>
-
-    <footer>
-    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>
