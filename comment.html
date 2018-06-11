@@ -21,7 +21,17 @@
     .collist-box{
       margin-top: 5rem;
     }
+
+
     </style>
+
+    <script type="text/javascript" language="javascript">
+    function onButtonClick1() {
+      target = document.getElementById("output1");
+      target.innerText = document.forms.form1.textBox1.value;
+    }
+    </script>
+
   </head>
 
   <body>
@@ -36,8 +46,9 @@
     <!--画像にコメントの追加-->
       <div class="collist-box">
         <form name="chat" onsubmit="send();return false" method="POST" >
-        <textarea id="text"cols="30" rows="5" placeholder="コメントを入力"></textarea><br>
-        <input type="submit" value="送信"></input>
+        <textarea id="text" name="textBox1" type="text"
+        cols="30" rows="5" placeholder="コメントを入力"></textarea><br>
+        <input type="button" value="送信" onclick="onButtonClick1();"></input>
         </form>
         <!--いいねボタン-->
         <form name="form1">
@@ -47,7 +58,10 @@
 
         <span id="counter"></span>
         <span id="counter2"></span>
+        <div id="output1"></div>
       </div>
+
+
     </div>
 
 

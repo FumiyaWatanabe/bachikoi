@@ -6,6 +6,10 @@ data: {date: $("#text").val()},//「id="text"」なテキストエリアのvalue
 });
 }
 
+function onButtonClick1() {
+  target = document.getElementById("output1");
+  target.innerText = document.forms.chat.textBox1.value;
+}
 
   //カウンタの初期値を設定
   var cnt = 0;
