@@ -13,16 +13,18 @@ html{
 
 .collist2 {
   overflow: hidden;
-  ;
 }
 
 .collist2 .collist-box {
-   float: left;
+   float: right;
+   width:40%;
    margin-bottom: 30px;
 
 }
 
 #image{
+float:left;
+margin-top: 90px;
 width: 55%;
 }
 
@@ -42,7 +44,7 @@ width: 55%;
 }
 
 textarea{
-width:300px;
+width:120%;
 height:100px;
 max-width:300px;
 max-height:100px;
@@ -58,7 +60,7 @@ max-height:100px;
   color: #ff7c5c;/*文字色*/
   font-weight: bold;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-  width: 100px;
+  width: 40%;
   display: inline;
 }
 .square_btn2{
@@ -70,7 +72,7 @@ max-height:100px;
   color: #0000ff;/*文字色*/
   font-weight: bold;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-  width: 100px;
+  width: 40%;;
   display: inline;
 }
 
@@ -105,11 +107,12 @@ form{
 
 .sharebutton{
   padding-top: 1rem;
-  width: 18rem;
+  width: 40%;
 
 }
 
 .downloadbutton{
   padding-top: 6rem;
+  width: 40%;
 
 }
